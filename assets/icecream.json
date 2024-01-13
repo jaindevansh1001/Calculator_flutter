@@ -1,0 +1,37 @@
+{
+    "icecreams": [
+        {
+            "flavour": "Vanilla",
+            "description":"Classic and creamy",
+            "toppings":"",
+            "price":"",
+            "image":"",
+            "ingredients": [
+                { "name":","},
+                { "name":""}
+            ]
+        },
+        {
+            "flavour": "Vanilla",
+            "description":"",
+            "toppings":"",
+            "price":"",
+            "image":"",
+            "ingredients": [
+                { "name":","},
+                { "name":""}
+            ]
+        },
+        {
+            "flavour": "Vanilla",
+            "description":"",
+            "toppings":"",
+            "price":"",
+            "image":"",
+            "ingredients": [
+                { "name":","},
+                { "name":""}
+            ]
+        }
+    ]
+}
