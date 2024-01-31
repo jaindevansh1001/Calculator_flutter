@@ -1,37 +1,57 @@
 {
     "icecreams": [
         {
-            "flavour": "Vanilla",
+            "flavor": "Vanilla",
             "description":"Classic and creamy",
-            "toppings":"",
-            "price":"",
-            "image":"",
+            "toppings":["Chocolate Sauce", "Sprinkles","Caremel Drizzle", "Chopped Nuts"],
+            "price":"4.99",
+            "image":"https://images.unsplash.com/photo-1560008581-09826d1de69e?q=80&w=444&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             "ingredients": [
-                { "name":","},
-                { "name":""}
+                { "name":"Vanilla Extract", "quantity": "2tsp"},
+                { "name":"Whipping Cream", "quantity": "1/2 cup"},
+                { "name":"Heavy Cream", "quantity":"2 cups"}
             ]
         },
         {
-            "flavour": "Vanilla",
-            "description":"",
-            "toppings":"",
-            "price":"",
-            "image":"",
+            "flavor": "Chocolate",
+            "description":"Rich and indulgent chocolate ice",
+            "toppings":["Chocolate Sauce", "Sprinkles","Caremel Drizzle", "Chopped Nuts"],
+            "price":"5.49",
+            "image":"https://images.unsplash.com/photo-1570081457302-6c0f1bd174bd?q=80&w=1035&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             "ingredients": [
-                { "name":","},
-                { "name":""}
+                { "name":"Cocoa Powder", "quantity": "1/2 cup"},
+                { "name":"Whipping Cream", "quantity": "1/2 cup"},
+                { "name":"Heavy Cream", "quantity":"2 cups"},
+                { "name":"Caremel Sauce", "quantity": "1/2 cup"},
+                { "name":"Vanilla Extract", "quantity": "2tsp"}
             ]
         },
         {
-            "flavour": "Vanilla",
-            "description":"",
-            "toppings":"",
-            "price":"",
-            "image":"",
+            "flavor": "Caremel Swirl",
+            "description":"Sweet and buttery",
+            "toppings":["Salted Caremel","Caremel Popkorn"],
+            "price":"5.79",
+            "image":"https://plus.unsplash.com/premium_photo-1661288452010-951ca57991fc?q=80&w=879&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             "ingredients": [
-                { "name":","},
-                { "name":""}
+                { "name":"Caremel Sauce", "quantity": "1/2 cup"},
+                { "name":"Whipping Cream", "quantity": "1/2 cup"},
+                { "name":"Vanilla Extract", "quantity": "2tsp"},
+                { "name":"Heavy Cream", "quantity": "1/4 cup"}
+            ]
+        },
+        {
+            "flavor": "Mint Chocolate Chip ",
+            "description":"Indulgent chocolate icecream",
+            "toppings":["Chopped Nuts","Caremel Drizzle"],
+            "price":"5.49",
+            "image":"https://images.unsplash.com/photo-1553452118-621e1f860f43?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "ingredients": [    
+                { "name":"Cocoa Powder", "quantity": "1/2 cup"},
+                { "name":"Whipping Cream", "quantity": "1/2 cup"},
+                { "name":"Caremel Sauce", "quantity": "1/2 cup"},
+                { "name":"Heavy Cream", "quantity": "1/4 cup"}
             ]
         }
+        
     ]
 }
