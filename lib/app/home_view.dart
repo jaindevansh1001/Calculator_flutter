@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_catalog/calculator/views/calculator_view.dart';
 import 'package:flutter_catalog/icecream/views/icecream_view.dart';
 
 class HomeView extends StatelessWidget {
@@ -8,7 +7,9 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
+      backgroundColor: Color.fromARGB(255, 74, 149, 214),
       body: SafeArea(
+        bottom: false,
         child: IcecreamView(),
       ),
     );

@@ -18,62 +18,91 @@ class IcecreamView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(16.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const Text("Icecream",
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
-          Text(
-            "We have something yummy for you",
-            style: Theme.of(context).textTheme.bodySmall!,
-          ),
-          const SizedBox(
-            height: 30,
-          ),
-          Expanded(
-            child: FutureBuilder(
-                future: loadIcecreams(),
-                builder: (context, snapshot) {
-                  if (snapshot.connectionState == ConnectionState.done) {
-                    final icecreams = snapshot.data;
-                    return Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        SizedBox(
-                          width: MediaQuery.sizeOf(context).width,
-                          height: MediaQuery.sizeOf(context).height / 2,
-                          child: ListView.builder(
-                            itemBuilder: (context, index) {
-                              final icecream = icecreams[index];
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Icecreams :)',
+            style: TextStyle(
+                fontSize: 50,
+                fontWeight: FontWeight.bold,
+                fontStyle: FontStyle.italic,
+                color: Color.fromARGB(255, 5, 81, 81))),
+      ),
+      body: Container(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Container(
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  const Text(
+                    "We have something yummy for you...",
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w900,
+                      color: Color.fromARGB(255, 167, 57, 17),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  Expanded(
+                    child: FutureBuilder(
+                        future: loadIcecreams(),
+                        builder: (context, snapshot) {
+                          if (snapshot.connectionState ==
+                              ConnectionState.done) {
+                            final icecreams = snapshot.data;
+                            return Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                SizedBox(
+                                  width: MediaQuery.sizeOf(context).width,
+                                  height:
+                                      MediaQuery.sizeOf(context).height / 2.5,
+                                  child: ListView.builder(
+                                    itemBuilder: (context, index) {
+                                      final icecream = icecreams[index];
 
-                              return InkWell(
-                                  onTap: () {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                IcecreamDetailView(
-                                                  icecream: icecream,
-                                                )));
-                                  },
-                                  child: IcecreamCard(icecream: icecream));
-                            },
-                            scrollDirection: Axis.horizontal,
-                            itemCount: icecreams!.length,
-                          ),
-                        ),
-                      ],
-                    );
-                  } else {
-                    return const Center(
-                        child: CircularProgressIndicator.adaptive());
-                  }
-                }),
-          )
-        ],
+                                      return InkWell(
+                                          onTap: () {
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        IcecreamDetailView(
+                                                          icecream: icecream,
+                                                        )));
+                                          },
+                                          child:
+                                              IcecreamCard(icecream: icecream));
+                                    },
+                                    scrollDirection: Axis.horizontal,
+                                    itemCount: icecreams!.length,
+                                  ),
+                                ),
+                              ],
+                            );
+                          } else {
+                            return const Center(
+                                child: CircularProgressIndicator.adaptive());
+                          }
+                        }),
+                  )
+                ],
+              ),
+            ),
+          ),
+        ),
       ),
     );
   }

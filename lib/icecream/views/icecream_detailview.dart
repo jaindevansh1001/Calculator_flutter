@@ -1,3 +1,4 @@
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/icecream/model/icecream.dart';
@@ -12,6 +13,7 @@ class IcecreamDetailView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(icecream.flavor),
+        backgroundColor: const Color.fromARGB(255, 242, 126, 192),
         elevation: 0,
       ),
       body: SingleChildScrollView(
@@ -25,7 +27,7 @@ class IcecreamDetailView extends StatelessWidget {
                   Hero(
                     tag: icecream.image!,
                     child: CircleAvatar(
-                      radius: 100,
+                      radius: 120,
                       backgroundImage: CachedNetworkImageProvider(
                           icecream.image!,
                           cacheKey: icecream.image!),
@@ -34,7 +36,7 @@ class IcecreamDetailView extends StatelessWidget {
                 ],
               ),
               const SizedBox(
-                width: 20,
+                width: 10,
               ),
               Text(
                 "\$${icecream.price.toString()}",
@@ -45,7 +47,7 @@ class IcecreamDetailView extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 20,
+                height: 2,
               ),
               Text(
                 icecream.description!,
@@ -57,12 +59,12 @@ class IcecreamDetailView extends StatelessWidget {
               const Text(
                 "Toppings",
                 style: TextStyle(
-                    color: Colors.pinkAccent,
+                    color: Color.fromARGB(255, 196, 30, 85),
                     fontSize: 30,
                     fontWeight: FontWeight.bold),
               ),
               SizedBox(
-                height: 70,
+                height: 60,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) {
@@ -77,12 +79,12 @@ class IcecreamDetailView extends StatelessWidget {
               const Text(
                 "Ingredients",
                 style: TextStyle(
-                    color: Colors.pinkAccent,
+                    color: Color.fromARGB(255, 196, 30, 85),
                     fontSize: 30,
                     fontWeight: FontWeight.bold),
               ),
               const SizedBox(
-                height: 10,
+                height: 5,
               ),
               ListView.builder(
                 scrollDirection: Axis.vertical,
@@ -96,7 +98,7 @@ class IcecreamDetailView extends StatelessWidget {
                     ),
                   );
                 },
-                itemCount: icecream.ingredients!.length,
+                itemCount: icecream.ingredients.length,
               ),
             ],
           ),

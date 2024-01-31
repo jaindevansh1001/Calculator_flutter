@@ -2,7 +2,6 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/icecream/model/icecream.dart';
 
-
 class IcecreamCard extends StatelessWidget {
   const IcecreamCard({
     super.key,
@@ -42,8 +41,8 @@ class IcecreamCard extends StatelessWidget {
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
                     topRight: Radius.circular(16),
-                    bottomRight: Radius.circular(16), 
-                    ),
+                    bottomRight: Radius.circular(16),
+                  ),
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,

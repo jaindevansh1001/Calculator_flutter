@@ -11,7 +11,6 @@ String icecreamDataToJson(IcecreamData data) {
 }
 
 class IcecreamData {
-  //18
   List<Icecream>? icecreams;
 
   IcecreamData({
